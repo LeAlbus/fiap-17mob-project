@@ -9,7 +9,14 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.pedrolopes.cordovaapp"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.pedrolopes.cordovaapp"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.pedrolopes.cordovaapp"
+    }
+  }
 }

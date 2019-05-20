@@ -43,18 +43,21 @@ var app = {
     }
 };
 
-// document.getElementById("loginButton").addEventListener("onclick", function () {
-//     var email = document.getElementById("email").value;
-//     var password = document.getElementById("password").value;
-
-//     console.log(email);
-// });
-
-function loginAction() {
+document.getElementById("LoginButton").addEventListener("click", function (event) {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    console.log(email);
-}
+    event.preventDefault();
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function (user) {
+            sessionStorage.setItem('user', JSON.stringify(user))
+            window.location.href = 'list.html'
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+
+});
 
 app.initialize();

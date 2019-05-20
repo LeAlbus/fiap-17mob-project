@@ -29,12 +29,12 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Hello World</title>
 </head>
 
@@ -47,22 +47,6 @@
    
     
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBXfFTnN4bxGRkDE9nJuHrMoemsB5infgU",
-            authDomain: "cordovaapp-28375.firebaseapp.com",
-            databaseURL: "https://cordovaapp-28375.firebaseio.com",
-            projectId: "cordovaapp-28375",
-            storageBucket: "cordovaapp-28375.appspot.com",
-            messagingSenderId: "685329457014",
-            appId: "1:685329457014:web:9e3675d36c45e8c4"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
 </body> -->
 
 
@@ -75,6 +59,7 @@
     <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
     <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -89,7 +74,8 @@
         <input type="password" class="loginForm" placeholder="Senha" id="password" />
 
         <div>
-            <button value="Login" onclick="loginAction()"></button>
+            <!--<input type="button" vaslue="Login" id="LoginAction" onclick="loginAction()" />-->
+            <button id="LoginButton"> Login </button>
         </div>
 
         <div>
@@ -99,6 +85,12 @@
         </div>
 
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/firebase.js"></script>
 </body>
 
 </html>
