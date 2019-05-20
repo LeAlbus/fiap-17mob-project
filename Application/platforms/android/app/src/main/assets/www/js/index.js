@@ -44,8 +44,8 @@ var app = {
 };
 
 document.getElementById("LoginButton").addEventListener("click", function (event) {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value.toLowerCase();
+    var password = document.getElementById("password").value.toLowerCase();
 
     event.preventDefault();
 
@@ -60,4 +60,8 @@ document.getElementById("LoginButton").addEventListener("click", function (event
 
 });
 
+document.getElementById("RegisterButton").addEventListener("click", function (event) {
+
+    window.location.href = 'register.html'
+});
 app.initialize();

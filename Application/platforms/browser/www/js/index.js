@@ -60,4 +60,8 @@ document.getElementById("LoginButton").addEventListener("click", function (event
 
 });
 
+document.getElementById("RegisterButton").addEventListener("click", function (event) {
+
+    window.location.href = 'register.html'
+});
 app.initialize();

@@ -1,12 +1,24 @@
 <!--https://pokeapi.co/api/v2/pokemon/-->
 
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
 <body>
 
-    <div>
-        <input type="text" placeholder="Pokemon name" id="pokemonNane" />
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Pokemon Name</span>
+        </div>
+        <textarea class="form-control" aria-label="Pokemon Name" id="pokemonNane"></textarea>
     </div>
     <div>
-        <button id="searchButton"> Login </button>
+        <button type="button" class="btn btn-primary" id="searchButton">Search</button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-danger" id="quitButton">Logout</button>
     </div>
     <div>
         <h1 id="pokeName"></h1>
@@ -14,7 +26,15 @@
         <h2 id="pokeWeight"></h2>
         <h2 id="pokeHeight"></h2>
     </div>
+    <div>
+        <img id="picture" src="./img/logo.png">
+        <button type="button" class="btn btn-warning" id="pictureButton">Take Photo</button>
+    </div>
 
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/list.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/firebase.js"></script>
 
 </body>

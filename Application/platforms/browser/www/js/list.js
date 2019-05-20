@@ -21,3 +21,11 @@ document.getElementById("searchButton").addEventListener("click", function (even
     pokeSearch.send();
 
 });
+
+document.getElementById('quitButton').addEventListener('click', function () {
+    firebase.auth().signOut().then(function () {
+        window.location.href = 'index.html'
+    }, function (error) {
+        console.log('error logout')
+    });
+});
