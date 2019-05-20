@@ -79,16 +79,26 @@
 
 <body>
 
-    <div id="loginPage">
+    <div class="LoginPanel">
 
-        <div class="LoginPanel">
+        <div>
             <h1>Login</h1>
         </div>
 
-        <input type="text" class="loginForm" placeholder="Email" />
-        <input type="text" class="loginForm" placeholder="Senha" />
-    </div>
+        <input type="text" class="loginForm" placeholder="Email" id="email" />
+        <input type="password" class="loginForm" placeholder="Senha" id="password" />
 
+        <div>
+            <input type="button" value="Login" onclick="loginAction()" />
+        </div>
+
+        <div>
+            <button>
+                Register
+            </button>
+        </div>
+
+    </div>
 </body>
 
 </html>

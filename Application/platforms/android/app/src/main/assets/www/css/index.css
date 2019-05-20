@@ -107,5 +107,18 @@ h1 {
 }
 
 .LoginPanel {
-    
+    width: 90%;
+    margin: 40% 5%;
+    background-color: #333333;
+    align-items: center;
+    justify-items: auto;
+}
+
+.loginForm {
+    width: 95%;
+}
+
+.loginBtn {
+    text-transform: uppercase;
+
 }
